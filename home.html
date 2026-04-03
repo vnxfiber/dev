@@ -1,9 +1,59 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BR Consultoria Ambiental</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to BR Consultoria Ambiental</h1>
-    <p>Your trusted partner in environmental consulting.</p>
+
+    <header>
+        <h1>BR Consultoria Ambiental</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Sobre Nós</h2>
+            <p>A BR Consultoria Ambiental oferece serviços de consultoria em gestão ambiental, incluindo estudos de impacto ambiental e análise de sustentabilidade.</p>
+        </section>
+
+        <section id="services">
+            <h2>Serviços</h2>
+            <ul>
+                <li>Consultoria em Gestão Ambiental</li>
+                <li>Estudos de Impacto Ambiental</li>
+                <li>Análise de Sustentabilidade</li>
+                <li>Treinamentos e Capacitações</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contato</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BR Consultoria Ambiental. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
