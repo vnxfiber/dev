@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001e40"/>
+      <stop offset="100%" style="stop-color:#003366"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1100" cy="100" r="200" fill="#006c49" opacity="0.3"/>
+  <circle cx="100" cy="550" r="150" fill="#8bf8c3" opacity="0.1"/>
+
+  <!-- Logo Icon -->
+  <g transform="translate(100, 165)">
+    <circle cx="100" cy="100" r="95" fill="rgba(255,255,255,0.1)"/>
+    <path d="M100 35 L145 55 L145 95 C145 125 125 150 100 165 C75 150 55 125 55 95 L55 55 Z"
+          fill="none" stroke="#8bf8c3" stroke-width="4"/>
+    <path d="M80 95 L95 110 L125 75"
+          fill="none" stroke="#8bf8c3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Text Content -->
+  <text x="420" y="230" font-family="Manrope, Arial, sans-serif" font-size="72" font-weight="800" fill="white">
+    BR Consultoria
+  </text>
+
+  <text x="420" y="300" font-family="Manrope, Arial, sans-serif" font-size="36" font-weight="600" fill="#8bf8c3">
+    Segurança e Conformidade Ambiental
+  </text>
+
+  <text x="420" y="370" font-family="Inter, Arial, sans-serif" font-size="24" fill="#c3c6d1">
+    Especialistas em AVCB e Vigilância Sanitária
+  </text>
+
+  <text x="420" y="420" font-family="Inter, Arial, sans-serif" font-size="24" fill="#c3c6d1">
+    São Luís - Maranhão
+  </text>
+
+  <!-- CTA Badge -->
+  <rect x="420" y="460" width="280" height="60" rx="30" fill="#006c49"/>
+  <text x="560" y="498" font-family="Manrope, Arial, sans-serif" font-size="24" font-weight="700" fill="white" text-anchor="middle">
+    Diagnóstico Gratuito
+  </text>
+</svg>
