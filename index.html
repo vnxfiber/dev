@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BR Consultoria | Segurança e Conformidade Ambiental</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#c3c6d1",
+                      "tertiary-fixed": "#d4e6e5",
+                      "on-surface": "#191c1d",
+                      "primary": "#001e40",
+                      "inverse-on-surface": "#f0f1f2",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#263636",
+                      "on-primary-fixed": "#001b3c",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f8f9fa",
+                      "surface-tint": "#3a5f94",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-secondary-fixed-variant": "#005236",
+                      "on-secondary-fixed": "#002113",
+                      "surface-dim": "#d9dadb",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "on-surface-variant": "#43474f",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#003366",
+                      "on-tertiary-fixed-variant": "#3a4a49",
+                      "surface-variant": "#e1e3e4",
+                      "surface-container": "#edeeef",
+                      "primary-fixed": "#d5e3ff",
+                      "outline": "#737780",
+                      "surface-bright": "#f8f9fa",
+                      "on-tertiary-fixed": "#0e1e1e",
+                      "tertiary": "#112121",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#2e3132",
+                      "secondary-container": "#8bf8c3",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f3f4f5",
+                      "tertiary-fixed-dim": "#b8cac9",
+                      "background": "#f8f9fa",
+                      "secondary-fixed-dim": "#6fdba8",
+                      "on-background": "#191c1d",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#1f477b",
+                      "on-tertiary-container": "#8e9f9e",
+                      "secondary-fixed": "#8bf8c3",
+                      "on-secondary-container": "#00734e",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#799dd6",
+                      "surface-container-high": "#e7e8e9",
+                      "inverse-primary": "#a7c8ff",
+                      "secondary": "#006c49"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-extrabold tracking-tighter text-blue-900 dark:text-white uppercase font-headline" href="#">
+                BR Consultoria
+            </a>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-blue-900 dark:text-blue-100 font-bold border-b-2 border-emerald-600 pb-1 font-headline tracking-tight" href="#servicos">Serviços</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 transition-colors font-headline tracking-tight" href="#segmentos">Clientes</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 transition-colors font-headline tracking-tight" href="#sobre">Sobre</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 transition-colors font-headline tracking-tight" href="#contato">Contato</a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded hover:opacity-90 transition-all font-headline font-bold text-sm uppercase tracking-wider active:scale-95 duration-150" href="#contato">
+                Solicitar Orçamento
+            </a>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-gradient-to-br from-primary to-primary-container">
+<div class="absolute inset-0 opacity-20 mix-blend-overlay">
+<img alt="" class="w-full h-full object-cover" data-alt="Corporate building facade with blue glass reflecting the sky, professional and architectural perspective with high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAklGoA1-xZrFU4HIN_0nxRd9MJGYdW8aClLWpy-9L2dp7PkCXxoAFmdPz6npHkHoLjoXyQBYSBDSN0GnAZpFaj1XKXLTrpJZgKpbYVutsuTiwe0baFcDYOipAnoxRk9kDyHEoLvS8QhNIguvEj3EP8gpWhrSuAcKURr9SVAO-yE-hqwxQP8FZSqQ4p5J7ayEJnxbniL0oTUNIYhJLU7yAidUO_aiALA6WGA0N8LVqTwERl0RoVYeKYK2j8DKCu6F4wAB60rFOEJo"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-secondary-container/10 border border-secondary/20 text-secondary-fixed px-4 py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-bold uppercase tracking-widest font-label">São Luís - Maranhão</span>
+</div>
+<h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-white leading-[1.1] tracking-tight">
+                        Segurança e Conformidade <span class="text-secondary">Definitiva.</span>
+</h1>
+<p class="text-lg text-slate-300 max-w-xl font-body leading-relaxed">
+                        Especialistas em AVCB e Vigilância Sanitária. Protegemos seu patrimônio e garantimos a regularidade do seu negócio com agilidade técnica e rigor normativo.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-secondary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-secondary/90 transition-all active:scale-95 shadow-xl shadow-secondary/20" href="#contato">
+                            Diagnóstico Gratuito
+                        </a>
+<a class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm" href="#servicos">
+                            Conhecer Serviços
+                        </a>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="bg-surface-container-lowest/5 backdrop-blur-xl rounded-2xl p-4 border border-white/10 shadow-2xl">
+<img alt="" class="rounded-xl w-full h-[500px] object-cover" data-alt="Civil engineer or consultant in high-visibility vest inspecting a modern industrial building facility, professional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Z2rCYjXcv60adiXOAnf9kHHlGJw7GamRi6i1FAOVYK7PvaJtOWoB1mytBEhfH9cDUEAYWD_h0uyi1dxPG3skfbBqeqbrD4re5lm_v77n7flMEuVNBCeO2axn9B370YW1_SFQikOU51ot2vdJEURhR_dgOnCTbIe_I5Sr4NluO0a8yiwSz6xkeJSkAmfs2NzgAfiUJU5u9KU9eoc5FkfcxuyCZQ8-8qBtsNU-MdQBrMyGyvXigyme9KQWQaUjJYJsfA00oYVK1WA"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl flex items-center gap-4">
+<div class="bg-secondary/10 p-3 rounded-lg text-secondary">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary font-headline">100% de Aprovação</p>
+<p class="text-xs text-on-surface-variant font-body">Em processos SEMUS e Bombeiros</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Seção Sobre -->
+<section class="py-24 bg-surface" id="sobre">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 space-y-6">
+<h2 class="text-sm font-extrabold text-secondary uppercase tracking-[0.2em] font-label">Nossa Autoridade</h2>
+<h3 class="text-4xl font-headline font-bold text-primary tracking-tight">Experiência que gera tranquilidade aos nossos clientes.</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Fundada com o propósito de desburocratizar a conformidade técnica em São Luís, a BR Consultoria consolidou-se como referência em engenharia de segurança e vigilância sanitária. Nossa equipe técnica é composta por especialistas que entendem as nuances das legislações locais e nacionais.
+                        </p>
+<div class="grid grid-cols-2 gap-8 pt-6">
+<div>
+<p class="text-3xl font-extrabold text-primary font-headline">500+</p>
+<p class="text-sm text-on-surface-variant font-label uppercase tracking-wider">Projetos Aprovados</p>
+</div>
+<div>
+<p class="text-3xl font-extrabold text-primary font-headline">100%</p>
+<p class="text-sm text-on-surface-variant font-label uppercase tracking-wider">Conformidade Técnica</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<img alt="" class="rounded-2xl h-64 w-full object-cover" data-alt="Modern architectural blueprint with technical tools on a desk, professional design environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgeYaOcyWxbUWSU-cNw2xVbzcId2TD1qQxcpVdYK0AjOoRC6BAlXrDnhRQDbz901HvcMl7VrqcENJ7p6V6KlEDSNTw-UaAkfDdlUnJ1zSp_hIsQzhF9G-Qv-lZBmINM7GftXj2atDlBLprehPyvWi3Acf76N37N9WEk_wRyIVwMaYqhBAe4dsNiMpxvqURj_XRkE1-t8h2ajWxvCN1eFm4xbGWJ8cfMwvojG-TuXdguRaihPEu2AOFn-DU1lo1H7mkGED-jxLsYIY"/>
+<img alt="" class="rounded-2xl h-80 w-full object-cover" data-alt="A focused business professional in a clean office environment discussing technical details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzngjxDNKtxnBXfMULR6hRYW3cmdaS9ZyZqJOAbYVsgRwAlCl5HLrjeGCXoT77p-A1t4LPAAwvP4uAb7RkO3bbkITyTWfWbXekt5VM5DSjPTfnDqehD_jiudg3R0JGZJgEdhwueYG_s_c2L-HzT9oTROys1HMMgIQ4acVjTrHChr26FuAezA8jDovJspIbJpuPtGQzopPRbn1nu47adQLbRnZIMmYINR1P6PYZ2d5FgCKCsoFePwhnGEfkmd47GsFJijqiFetzp-c"/>
+</div>
+<div class="space-y-4">
+<img alt="" class="rounded-2xl h-80 w-full object-cover" data-alt="Technical team collaborating in a bright workspace with maps and documents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9b9pJPN5BA4O-3fCOY-yzEQ7Kr0GrzVgGnzrwUTDGRy7nnih6a195rmiyfuGABIwh_1H2tMwi9mTlIE5OEI8Hmkfu59iRAqitMRW4lAK6W093MXcN2kUVsX-rXoBTzCf4G3uOHlhOvS6kaKR9NKsi_R6Tt0YIOJ-HJWGncd3-Ua9V7fqBo2OoC6AKGp32Cik6intlTA0h4307IJslUQIUrUBxtCss0rISRE-xeslKzD6AaNhMcCs59C58k38iBLdwUKGMb030LXE"/>
+<img alt="" class="rounded-2xl h-64 w-full object-cover" data-alt="Close-up of a high-tech safety inspection equipment being used in a commercial setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlV6QeHEHlEv3msSgHt4WXg34jkIut8Msms-2j_4-4HCruFgFBs2gYuoIAnc96OqeXzKy6rXKBqT5y5-MALR6t4q9nbyd7m1IDW1IkzfiNfM3Xr4vG6-e63ZwZVFVi28fKzOlVHyYxbHg3GY13RySzxo-ohyA3yW35J2IxhOb5TmJW2jdNKPkRDAEtnU1psEM2jxLbCFxEW8JL_UlIhueYB24yPOTxxNcvpveZNOZWvmdbjyAM6-FTwxWjeTQ7yzbDnkmHIFPCKPY"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Seção Serviços Detalhada -->
+<section class="py-24 bg-surface-container-low" id="servicos">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20 space-y-4">
+<h2 class="text-sm font-extrabold text-secondary uppercase tracking-[0.2em] font-label">Nossas Soluções</h2>
+<h3 class="text-4xl lg:text-5xl font-headline font-bold text-primary tracking-tight">Serviços Técnicos Especializados</h3>
+</div>
+<div class="grid lg:grid-cols-2 gap-12">
+<!-- AVCB Card -->
+<div class="bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant/10 shadow-sm hover:shadow-xl transition-all duration-500 group">
+<div class="w-16 h-16 bg-primary text-white flex items-center justify-center rounded-xl mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">local_fire_department</span>
+</div>
+<h4 class="text-3xl font-headline font-bold text-primary mb-6">AVCB &amp; Projeto de Incêndio</h4>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                            Gestão completa para obtenção e renovação do Auto de Vistoria do Corpo de Bombeiros. Atuamos desde a concepção do projeto técnico até o acompanhamento final da vistoria.
+                        </p>
+<ul class="space-y-4 mb-10 text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+                                Elaboração de Projetos de Segurança Contra Incêndio (PSCIP)
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+                                Instalação e Manutenção de Equipamentos de Proteção
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+                                Treinamento de Brigada de Incêndio Certificada
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+                                Renovação e Vistoria para Licenciamento Anual
+                            </li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary font-bold font-headline group/link" href="#contato">
+                            Solicitar Cotação AVCB
+                            <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Vigilância Sanitária Card -->
+<div class="bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant/10 shadow-sm hover:shadow-xl transition-all duration-500 group">
+<div class="w-16 h-16 bg-secondary text-white flex items-center justify-center rounded-xl mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">health_and_safety</span>
+</div>
+<h4 class="text-3xl font-headline font-bold text-primary mb-6">Vigilância Sanitária (SEMUS)</h4>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                            Adequação total às normas da SEMUS para empresas do setor de alimentos, saúde e serviços. Evite multas e interdições com processos higiênico-sanitários rigorosos.
+                        </p>
+<ul class="space-y-4 mb-10 text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+                                Manual de Boas Práticas e POPs Customizados
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+                                Treinamentos de Manipulação de Alimentos
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+                                Licenciamento Sanitário e Renovação de Alvarás
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+                                Auditoria Interna de Diagnóstico Sanitário
+                            </li>
+</ul>
+<a class="inline-flex items-center gap-2 text-secondary font-bold font-headline group/link" href="#contato">
+                            Consultoria Sanitária
+                            <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Seção Segmentos Atendidos (Bento Grid) -->
+<section class="py-24 bg-surface" id="segmentos">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-sm font-extrabold text-secondary uppercase tracking-[0.2em] font-label">Expertise Multissetorial</h2>
+<h3 class="text-4xl font-headline font-bold text-primary mt-2">Atendemos diversos segmentos em São Luís</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern industrial facility exterior with clean lines and safety signs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4UWaxLNEPV8y17tTqUebogQR7b7rd2JtsaeBzEGIA-WopCZ5DQWTbfk60FqnGPqr_6gAULRK-nhupJeUcsc0DxJh71fds8mGUy1JJldL79FDD6U_OyJSPY2u-4EOynifU6yKr3_GuA4z6X3xHxU2RIFl1cVNmfteS2_w0bFz3PFjfnl0BhNctZwmfT8b3Yyfg8OqxMrntmOu8fMaJ2h5PnibvM8ixsZYb7M4Q4CPI2u5NTRZA19i2CVyVAbBi58-W3khv1ghRIX4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<h5 class="text-white text-2xl font-bold font-headline">Indústrias</h5>
+<p class="text-slate-300 text-sm">Grandes plantas e galpões logísticos</p>
+</div>
+</div>
+<div class="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Clean and organized commercial retail store interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD936bdARVdtOn94CHxSUhU3qkliAF5MwcO1LjTlvNVZjdmAoaEf7EV-lcmtD-lUwOWTF3N0DKOTBhPET5WQEjxlgyg1UuxSXlvy_mIKRYbE87hWOd3EOa2qO76jA8KZt0QNJYeVsFL1L6X3uiQJ-Rs0TlJEWlWl0cYIQiViyYzMbnTlQVbGSwg9suMR4HTe1n4EZDqFiZSQ4VdH-LZ5P9bZBGEylnKAjEbZcc8Q54Gu9AmywxeH4msbXVDJ8DhaRAyrT0oNWko-Tk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent flex flex-col justify-end p-6">
+<h5 class="text-white text-xl font-bold font-headline">Comércios</h5>
+<p class="text-white/80 text-sm">Lojas e Centros Comerciais</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden group">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Classroom setting in a modern school" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn_5MyXVH8IVzEOjVK5NOmAYfoJ_TbExbH7ZbOpjA_YFLogEHZOoDssH8q8qSLKXnsYi8OUsDv50Kfjh9ahYpbEYpCd72t1zUT25S_8r8I6CzRZ9CGyoJvFlLG9iw8_MTQJNusTbYXu9sodjZdgntd-_WOFWAIFMRu3C0Wzna8EnDoKm0sMLzsVu2RLcwxgzFEBXVlQ2xuaOxHicillBAxWlg3ULytEH2Skk065LHjsd2Sha-YiWEt1NM94R0oceZIo3AyDaRZ7gQ"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="text-white font-bold font-headline">Escolas</span>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden group">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Upscale restaurant interior with wooden accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGv3o0d4mHQnBBBnkzsIeED7d_jIcKbElZjO9ZZQRajY5uWldRfyX5a3Se0TYd9Wyi9qYhhyvJNi9QY3wgqKdnuZGuunpy3KSekYSLS_ip0Sqmkbs8QyMUEVEywrzZ91WqqRvqWirzQkDUQ6u9wfmGAccHSIwQWCuR8yoMvLy3LYVSnl2dsFvShSkbOYqVCQnTKd6fruypWPC4SENwnfvX-PNOkp2NrMOCRe-vCr_SbYcxLmZ1l2TpVnEbYeni4t-qmbE5ZjFVGPw"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="text-white font-bold font-headline">Restaurantes</span>
+</div>
+</div>
+<div class="col-span-1 relative rounded-2xl overflow-hidden group">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a kitchen or bakery setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA35r_xMB6uXzgwx-vJykZA5YUMPj0UZN6dgg4XJ--nJkqnrpddW23hZB1008_0a1RySVPBe2-9LGRNvJm7pdZVemndwhhhLlGEmSSvS5YqY8UnqZdeP7mWSqO3xRssJPuIl1Rigra_8Dy5TY98wioBJbOLA0mYmiJuhifzNQFETt7BGnvtn2xwk5KX61GSOLuUdP1Bn70MXU9WfyJcKOpyzBVWJHCee7Sd7raHz57JeMUcrFOhRfPShLmPkajB-yi10YwUPI5gIRo"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="text-white font-bold font-headline">Padarias</span>
+</div>
+</div>
+<div class="col-span-1 relative rounded-2xl overflow-hidden group">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern optician shop with organized display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLPKVA1qxTWZnLgxor-Pe-UhPzyHVpanayd1rWX3YjoI9iCeTkp8NqUCKQnKu0m08JBKhnJCMhP-ySOw9W_8EY2nN9I38E8hjcQd9nTBrh0xEShyv3wUxqXt-gEWWP-F8w6bUxJF5XubgiE4zCmh6SKVBsXfqjSD14dTdIhTfaH2NFsf0H34s3LKzwGHVvQ6Q0BEcW_Kzt-sXeO7WyO746tLFKlnNPgcMCHhCc8B2wv2S89QkdnAU7NESFX6gcbWAZ7_zrCYCm98M"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="text-white font-bold font-headline">Óticas</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Diferenciais / FAQ -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-2 gap-20">
+<div>
+<h2 class="text-sm font-extrabold text-secondary uppercase tracking-[0.2em] font-label mb-4">Por que nós?</h2>
+<h3 class="text-4xl font-headline font-bold text-primary mb-8 leading-tight">Diferenciais que aceleram sua conformidade.</h3>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+</div>
+<div>
+<h5 class="text-lg font-bold text-primary font-headline">Agilidade Técnica</h5>
+<p class="text-on-surface-variant">Processos otimizados para reduzir o tempo de aprovação junto aos órgãos reguladores.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary">free_cancellation</span>
+</div>
+<div>
+<h5 class="text-lg font-bold text-primary font-headline">Diagnóstico Gratuito</h5>
+<p class="text-on-surface-variant">Realizamos uma visita técnica preliminar sem custo para identificar suas principais necessidades.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary">support_agent</span>
+</div>
+<div>
+<h5 class="text-lg font-bold text-primary font-headline">Suporte Contínuo</h5>
+<p class="text-on-surface-variant">Acompanhamento pós-certificação para garantir que sua empresa permaneça em dia.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-2xl font-headline font-bold text-primary mb-6">Perguntas Frequentes</h4>
+<details class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/10 group open:shadow-md transition-all cursor-pointer">
+<summary class="flex justify-between items-center font-bold font-headline text-primary list-none">
+                                Qual o prazo médio para um AVCB?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant leading-relaxed">O prazo varia conforme a complexidade da edificação e as adequações necessárias, mas em média nossos processos levam de 30 a 60 dias para conclusão total.</p>
+</details>
+<details class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/10 group open:shadow-md transition-all cursor-pointer">
+<summary class="flex justify-between items-center font-bold font-headline text-primary list-none">
+                                Atendem apenas São Luís?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant leading-relaxed">Focamos em São Luís e Região Metropolitana (Paço do Lumiar, São José de Ribamar e Raposa), garantindo proximidade e agilidade.</p>
+</details>
+<details class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/10 group open:shadow-md transition-all cursor-pointer">
+<summary class="flex justify-between items-center font-bold font-headline text-primary list-none">
+                                A consultoria sanitária inclui treinamento?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant leading-relaxed">Sim, oferecemos treinamentos completos de Boas Práticas de Manipulação com entrega de certificados para a equipe.</p>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- Depoimentos -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-sm font-extrabold text-secondary uppercase tracking-[0.2em] font-label">Prova Social</h2>
+<h3 class="text-4xl font-headline font-bold text-primary mt-2 tracking-tight">O que dizem nossos parceiros</h3>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-surface-container-low p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-secondary/20 text-6xl absolute top-4 right-4">format_quote</span>
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant mb-8 italic">"Excelente suporte na renovação do nosso AVCB. Profissionais extremamente técnicos e comprometidos com o prazo."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">AM</div>
+<div>
+<p class="font-bold text-primary font-headline">André Martins</p>
+<p class="text-xs text-on-surface-variant uppercase font-label">Gerente Industrial</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-secondary/20 text-6xl absolute top-4 right-4">format_quote</span>
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant mb-8 italic">"A BR Consultoria nos ajudou a organizar todos os POPs e treinar nossa equipe de cozinha. Aprovamos na SEMUS sem ressalvas."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">RC</div>
+<div>
+<p class="font-bold text-primary font-headline">Renata Costa</p>
+<p class="text-xs text-on-surface-variant uppercase font-label">Proprietária de Buffet</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-secondary/20 text-6xl absolute top-4 right-4">format_quote</span>
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant mb-8 italic">"Segurança e confiança definem o trabalho. O diagnóstico gratuito nos mostrou pontos críticos que nem imaginávamos."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">FP</div>
+<div>
+<p class="font-bold text-primary font-headline">Fernando Paiva</p>
+<p class="text-xs text-on-surface-variant uppercase font-label">Diretor Escolar</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lead Form Section -->
+<section class="py-24 bg-primary text-white overflow-hidden relative" id="contato">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-secondary/10 -skew-x-12 translate-x-20"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-5xl font-headline font-extrabold mb-6 tracking-tight">Pronto para regularizar seu negócio?</h2>
+<p class="text-xl text-slate-300 mb-10 leading-relaxed">Preencha o formulário e nossa equipe técnica entrará em contato em até 24 horas para agendar seu diagnóstico gratuito.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">phone_in_talk</span>
+</div>
+<span class="text-lg font-medium">(98) 98123-4567</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">mail</span>
+</div>
+<span class="text-lg font-medium">contato@brconsultoria.com.br</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+</div>
+<span class="text-lg font-medium">Renascença II, São Luís - MA</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-8 shadow-2xl text-on-surface">
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">Nome Completo</label>
+<input class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg" placeholder="Ex: João Silva" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">WhatsApp</label>
+<input class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg" placeholder="(98) 00000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">Nome da Empresa</label>
+<input class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg" placeholder="Sua Empresa Ltda" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">Serviço de Interesse</label>
+<select class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg appearance-none">
+<option disabled="" selected="" value="">Selecione uma opção</option>
+<option>Projeto e Renovação de AVCB</option>
+<option>Vigilância Sanitária (SEMUS)</option>
+<option>Treinamentos e Manual de Boas Práticas</option>
+<option>Consultoria Completa (Mensal)</option>
+</select>
+</div>
+<button class="w-full bg-secondary text-white py-5 rounded-lg font-headline font-extrabold text-xl hover:bg-secondary/90 transition-all shadow-lg shadow-secondary/20 active:scale-[0.98]" type="submit">
+                                Solicitar Diagnóstico Agora
+                            </button>
+<p class="text-center text-xs text-on-surface-variant font-body">Seus dados estão seguros e protegidos pela LGPD.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-bold text-blue-900 dark:text-white font-headline">BR Consultoria</div>
+<p class="text-slate-500 dark:text-slate-400 font-body text-sm leading-relaxed">
+                    Referência em engenharia de segurança e conformidade sanitária no Maranhão. Transformando burocracia em segurança.
+                </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="text-slate-400 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">hub</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-blue-900 dark:text-blue-100 font-bold font-headline uppercase text-xs tracking-widest">Navegação</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 transition-all font-inter text-sm tracking-wide" href="#sobre">Sobre</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 transition-all font-inter text-sm tracking-wide" href="#servicos">Serviços</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 transition-all font-inter text-sm tracking-wide" href="#segmentos">Clientes</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 transition-all font-inter text-sm tracking-wide" href="#contato">Contato</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-blue-900 dark:text-blue-100 font-bold font-headline uppercase text-xs tracking-widest">Links Legais</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 transition-all font-inter text-sm tracking-wide" href="#">Política de Privacidade</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 transition-all font-inter text-sm tracking-wide" href="#">Termos de Uso</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-blue-900 dark:text-blue-100 font-bold font-headline uppercase text-xs tracking-widest">Social</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 transition-all font-inter text-sm tracking-wide" href="#">LinkedIn</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 transition-all font-inter text-sm tracking-wide" href="#">Instagram</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 transition-all font-inter text-sm tracking-wide" href="#">E-mail</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 py-8 border-t border-slate-200 dark:border-slate-800 text-center md:text-left">
+<p class="text-slate-500 dark:text-slate-400 font-inter text-xs tracking-wide">
+                © 2024 BR Consultoria Ambiental. Todos os direitos reservados.
+            </p>
+</div>
+</footer>
+</body></html>
