@@ -467,30 +467,37 @@
 </div>
 </div>
 <div class="bg-white rounded-2xl p-8 shadow-2xl text-on-surface">
-<form class="space-y-6">
+<form class="space-y-6" id="contact-form" novalidate>
 <div class="grid md:grid-cols-2 gap-6">
 <div class="space-y-2">
-<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">Nome Completo</label>
-<input class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg" placeholder="Ex: João Silva" type="text"/>
+<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">Nome Completo *</label>
+<input id="nome" class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg" placeholder="Ex: João Silva" type="text" required minlength="3" pattern="[A-Za-zÀ-ÿ\s]+$"/>
+<span class="text-xs text-red-500 hidden" id="nome-error">Digite um nome válido (mínimo 3 caracteres)</span>
 </div>
 <div class="space-y-2">
-<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">WhatsApp</label>
-<input class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg" placeholder="(98) 00000-0000" type="tel"/>
+<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">WhatsApp *</label>
+<input id="whatsapp" class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg" placeholder="(98) 00000-0000" type="tel" required pattern="^\(\d{2}\)\s\d{5}-\d{4}$"/>
+<span class="text-xs text-red-500 hidden" id="whatsapp-error">Digite um WhatsApp válido: (98) 99999-9999</span>
 </div>
 </div>
 <div class="space-y-2">
-<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">Nome da Empresa</label>
-<input class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg" placeholder="Sua Empresa Ltda" type="text"/>
+<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">Nome da Empresa *</label>
+<input id="empresa" class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg" placeholder="Sua Empresa Ltda" type="text" required minlength="2"/>
+<span class="text-xs text-red-500 hidden" id="empresa-error">Digite o nome da empresa</span>
 </div>
 <div class="space-y-2">
-<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">Serviço de Interesse</label>
-<select class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg appearance-none">
+<label class="text-sm font-bold font-label text-primary uppercase tracking-wider">Serviço de Interesse *</label>
+<select id="servico" class="w-full border-0 border-b-2 border-slate-200 focus:border-secondary focus:ring-0 transition-all px-0 py-2 text-lg appearance-none" required>
 <option disabled="" selected="" value="">Selecione uma opção</option>
 <option>Projeto e Renovação de AVCB</option>
 <option>Vigilância Sanitária (SEMUS)</option>
 <option>Treinamentos e Manual de Boas Práticas</option>
 <option>Consultoria Completa (Mensal)</option>
 </select>
+<span class="text-xs text-red-500 hidden" id="servico-error">Selecione um serviço</span>
+</div>
+<div id="form-success" class="hidden p-4 bg-green-100 text-green-700 rounded-lg text-center">
+✉️ Solicitação enviada com sucesso! Entraremos em contato em breve.
 </div>
 <button class="w-full bg-secondary text-white py-5 rounded-lg font-headline font-extrabold text-xl hover:bg-secondary/90 transition-all shadow-lg shadow-secondary/20 active:scale-[0.98]" type="submit">
                                 Solicitar Diagnóstico Agora
@@ -555,4 +562,86 @@
 <a class="fixed bottom-6 right-6 bg-secondary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-40" href="https://wa.me/55989883098259?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20BR%20Consultoria%20Ambiental." aria-label="Contato via WhatsApp">
     <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
 </a>
+
+<script>
+// Form Validation
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let isValid = true;
+    const form = this;
+
+    // Nome validation
+    const nome = document.getElementById('nome');
+    const nomeError = document.getElementById('nome-error');
+    if (!nome.value || nome.value.length < 3 || !/^[A-Za-zÀ-ÿ\s]+$/.test(nome.value)) {
+        nome.classList.add('border-red-500');
+        nomeError.classList.remove('hidden');
+        isValid = false;
+    } else {
+        nome.classList.remove('border-red-500');
+        nomeError.classList.add('hidden');
+    }
+
+    // WhatsApp validation
+    const whatsapp = document.getElementById('whatsapp');
+    const whatsappError = document.getElementById('whatsapp-error');
+    const phonePattern = /^\(\d{2}\)\s\d{5}-\d{4}$/;
+    if (!phonePattern.test(whatsapp.value)) {
+        whatsapp.classList.add('border-red-500');
+        whatsappError.classList.remove('hidden');
+        isValid = false;
+    } else {
+        whatsapp.classList.remove('border-red-500');
+        whatsappError.classList.add('hidden');
+    }
+
+    // Empresa validation
+    const empresa = document.getElementById('empresa');
+    const empresaError = document.getElementById('empresa-error');
+    if (!empresa.value || empresa.value.length < 2) {
+        empresa.classList.add('border-red-500');
+        empresaError.classList.remove('hidden');
+        isValid = false;
+    } else {
+        empresa.classList.remove('border-red-500');
+        empresaError.classList.add('hidden');
+    }
+
+    // Serviço validation
+    const servico = document.getElementById('servico');
+    const servicoError = document.getElementById('servico-error');
+    if (!servico.value) {
+        servico.classList.add('border-red-500');
+        servicoError.classList.remove('hidden');
+        isValid = false;
+    } else {
+        servico.classList.remove('border-red-500');
+        servicoError.classList.add('hidden');
+    }
+
+    if (isValid) {
+        document.getElementById('form-success').classList.remove('hidden');
+        form.reset();
+        setTimeout(() => {
+            document.getElementById('form-success').classList.add('hidden');
+        }, 5000);
+    }
+});
+
+// WhatsApp mask
+document.getElementById('whatsapp').addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 11) value = value.slice(0, 11);
+
+    if (value.length > 6) {
+        value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+    } else if (value.length > 2) {
+        value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+    } else if (value.length > 0) {
+        value = `(${value}`;
+    }
+    e.target.value = value;
+});
+</script>
 </body></html>
