@@ -250,20 +250,42 @@
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-md">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<a class="text-xl font-extrabold tracking-tighter text-blue-900 dark:text-white uppercase font-headline" href="#">
-                BR Consultoria
-            </a>
-<div class="hidden md:flex items-center gap-10">
-<a class="text-blue-900 dark:text-blue-100 font-bold border-b-2 border-emerald-600 pb-1 font-headline tracking-tight" href="#servicos">Serviços</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 transition-colors font-headline tracking-tight" href="#segmentos">Clientes</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 transition-colors font-headline tracking-tight" href="#sobre">Sobre</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 transition-colors font-headline tracking-tight" href="#contato">Contato</a>
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-slate-900/90 backdrop-blur-md">
+<div class="flex justify-between items-center px-4 sm:px-8 py-3 sm:py-4 max-w-7xl mx-auto">
+<a class="text-lg sm:text-xl font-extrabold tracking-tighter text-blue-900 dark:text-white uppercase font-headline" href="#">
+    BR Consultoria
+</a>
+
+<!-- Desktop Nav -->
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-blue-900 dark:text-blue-100 font-bold border-b-2 border-emerald-600 pb-1 font-headline tracking-tight text-sm" href="#servicos">Serviços</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 transition-colors font-headline tracking-tight text-sm" href="#segmentos">Clientes</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 transition-colors font-headline tracking-tight text-sm" href="#sobre">Sobre</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 transition-colors font-headline tracking-tight text-sm" href="#contato">Contato</a>
+<a class="bg-primary text-on-primary px-4 py-2 rounded hover:opacity-90 transition-all font-headline font-bold text-xs uppercase tracking-wider active:scale-95 duration-150 whitespace-nowrap" href="#contato">
+    Solicitar Orçamento
+</a>
 </div>
-<a class="bg-primary text-on-primary px-6 py-2.5 rounded hover:opacity-90 transition-all font-headline font-bold text-sm uppercase tracking-wider active:scale-95 duration-150" href="#contato">
-                Solicitar Orçamento
-            </a>
+
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-btn" class="lg:hidden p-2 text-primary" aria-label="Abrir menu">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+</button>
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden lg:hidden bg-surface border-t border-slate-200 dark:bg-slate-900">
+<div class="px-4 py-4 space-y-3">
+<a class="block text-blue-900 font-bold font-headline text-sm py-2" href="#servicos">Serviços</a>
+<a class="block text-slate-600 font-medium font-headline text-sm py-2" href="#segmentos">Clientes</a>
+<a class="block text-slate-600 font-medium font-headline text-sm py-2" href="#sobre">Sobre</a>
+<a class="block text-slate-600 font-medium font-headline text-sm py-2" href="#contato">Contato</a>
+<a class="block bg-primary text-on-primary text-center px-4 py-3 rounded font-headline font-bold text-sm uppercase tracking-wider mt-4" href="#contato">
+    Solicitar Orçamento
+</a>
+</div>
 </div>
 </nav>
 <main class="pt-20">
@@ -803,6 +825,23 @@ Aguardo retorno!`;
         form.reset();
     }
 });
+
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+}
 
 // WhatsApp mask
 document.getElementById('whatsapp').addEventListener('input', function(e) {
