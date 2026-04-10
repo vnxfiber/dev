@@ -246,6 +246,157 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
+
+        /* Scroll Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fade-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stagger delays */
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+        .delay-400 { transition-delay: 0.4s; }
+        .delay-500 { transition-delay: 0.5s; }
+
+        /* Floating animation for WhatsApp */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Pulse animation for CTA */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 108, 73, 0.4); }
+            50% { box-shadow: 0 0 20px 10px rgba(0, 108, 73, 0.2); }
+        }
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        /* Text reveal animation */
+        @keyframes text-reveal {
+            0% { clip-path: inset(0 100% 0 0); }
+            100% { clip-path: inset(0 0 0 0); }
+        }
+        .text-reveal {
+            animation: text-reveal 1s ease-out forwards;
+        }
+
+        /* Hover lift effect */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 30, 64, 0.15);
+        }
+
+        /* Icon rotate on hover */
+        .hover-rotate {
+            transition: transform 0.4s ease;
+        }
+        .hover-rotate:hover {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        /* Counter animation */
+        @keyframes count-up {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .count-up {
+            animation: count-up 0.6s ease-out forwards;
+        }
+
+        /* Gradient shift animation */
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-animated {
+            background-size: 200% 200%;
+            animation: gradient-shift 8s ease infinite;
+        }
+
+        /* Shimmer effect */
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer {
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+
+        /* Typing cursor effect */
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        .cursor-blink::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+
+        /* Bounce animation */
+        @keyframes bounce-in {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .bounce-in {
+            animation: bounce-in 0.5s ease-out;
+        }
+
+        /* Subtle background movement */
+        @keyframes subtle-move {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(2px, -2px); }
+            50% { transform: translate(-2px, 2px); }
+            75% { transform: translate(2px, 2px); }
+        }
+        .subtle-move {
+            animation: subtle-move 10s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
@@ -290,33 +441,33 @@
 </nav>
 <main class="pt-20">
 <!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center overflow-hidden bg-gradient-to-br from-primary to-primary-container">
-<div class="absolute inset-0 opacity-20 mix-blend-overlay">
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-gradient-to-br from-primary to-primary-container gradient-animated">
+<div class="absolute inset-0 opacity-20 mix-blend-overlay hero-parallax">
 <img alt="Fachada de edifício corporativo com vidro azul refletindo o céu, perspectiva arquitetônica profissional" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAklGoA1-xZrFU4HIN_0nxRd9MJGYdW8aClLWpy-9L2dp7PkCXxoAFmdPz6npHkHoLjoXyQBYSBDSN0GnAZpFaj1XKXLTrpJZgKpbYVutsuTiwe0baFcDYOipAnoxRk9kDyHEoLvS8QhNIguvEj3EP8gpWhrSuAcKURr9SVAO-yE-hqwxQP8FZSqQ4p5J7ayEJnxbniL0oTUNIYhJLU7yAidUO_aiALA6WGA0N8LVqTwERl0RoVYeKYK2j8DKCu6F4wAB60rFOEJo"/>
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-12 items-center">
 <div class="space-y-8">
-<div class="inline-flex items-center gap-2 bg-secondary-container/10 border border-secondary/20 text-secondary-fixed px-4 py-1.5 rounded-full">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div class="inline-flex items-center gap-2 bg-secondary-container/10 border border-secondary/20 text-secondary-fixed px-4 py-1.5 rounded-full fade-up">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
 <span class="text-xs font-bold uppercase tracking-widest font-label">São Luís - Maranhão</span>
 </div>
-<h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-white leading-[1.1] tracking-tight">
+<h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-white leading-[1.1] tracking-tight fade-up delay-100">
                         Segurança e Conformidade <span class="text-secondary">Definitiva.</span>
 </h1>
-<p class="text-lg text-slate-300 max-w-xl font-body leading-relaxed">
+<p class="text-lg text-slate-300 max-w-xl font-body leading-relaxed fade-up delay-200">
                         Especialistas em AVCB e Vigilância Sanitária. Protegemos seu patrimônio e garantimos a regularidade do seu negócio com agilidade técnica e rigor normativo.
                     </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<a class="bg-secondary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-secondary/90 transition-all active:scale-95 shadow-xl shadow-secondary/20" href="https://wa.me/55989883098259?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20BR%20Consultoria%20Ambiental.">
+<div class="flex flex-wrap gap-4 pt-4 fade-up delay-300">
+<a class="bg-secondary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-secondary/90 transition-all active:scale-95 shadow-xl shadow-secondary/20 hover-lift" href="https://wa.me/55989883098259?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20BR%20Consultoria%20Ambiental.">
                             Diagnóstico Gratuito
                         </a>
-<a class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm" href="#servicos">
+<a class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm hover-lift" href="#servicos">
                             Conhecer Serviços
                         </a>
 </div>
 </div>
-<div class="hidden lg:block relative">
-<div class="bg-surface-container-lowest/5 backdrop-blur-xl rounded-2xl p-4 border border-white/10 shadow-2xl">
+<div class="hidden lg:block relative fade-right delay-200">
+<div class="bg-surface-container-lowest/5 backdrop-blur-xl rounded-2xl p-4 border border-white/10 shadow-2xl hover:scale-105 transition-transform duration-500">
 <img alt="Engenheiro civil ou consultor usando colete de alta visibilidade inspecionando instalação industrial moderna, atmosfera profissional" class="rounded-xl w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Z2rCYjXcv60adiXOAnf9kHHlGJw7GamRi6i1FAOVYK7PvaJtOWoB1mytBEhfH9cDUEAYWD_h0uyi1dxPG3skfbBqeqbrD4re5lm_v77n7flMEuVNBCeO2axn9B370YW1_SFQikOU51ot2vdJEURhR_dgOnCTbIe_I5Sr4NluO0a8yiwSz6xkeJSkAmfs2NzgAfiUJU5u9KU9eoc5FkfcxuyCZQ8-8qBtsNU-MdQBrMyGyvXigyme9KQWQaUjJYJsfA00oYVK1WA"/>
 </div>
 <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl flex items-center gap-4">
@@ -369,13 +520,13 @@
 <section class="py-24 bg-surface-container-low" id="servicos">
 <div class="max-w-7xl mx-auto px-8">
 <div class="text-center mb-20 space-y-4">
-<h2 class="text-sm font-extrabold text-secondary uppercase tracking-[0.2em] font-label">Nossas Soluções</h2>
-<h3 class="text-4xl lg:text-5xl font-headline font-bold text-primary tracking-tight">Serviços Técnicos Especializados</h3>
+<h2 class="text-sm font-extrabold text-secondary uppercase tracking-[0.2em] font-label fade-up">Nossas Soluções</h2>
+<h3 class="text-4xl lg:text-5xl font-headline font-bold text-primary tracking-tight fade-up delay-100">Serviços Técnicos Especializados</h3>
 </div>
 <div class="grid lg:grid-cols-2 gap-12">
 <!-- AVCB Card -->
-<div class="bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant/10 shadow-sm hover:shadow-xl transition-all duration-500 group">
-<div class="w-16 h-16 bg-primary text-white flex items-center justify-center rounded-xl mb-8 group-hover:scale-110 transition-transform">
+<div class="bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant/10 shadow-sm hover:shadow-xl transition-all duration-500 group hover-lift fade-up delay-200">
+<div class="w-16 h-16 bg-primary text-white flex items-center justify-center rounded-xl mb-8 group-hover:scale-110 transition-transform hover-rotate">
 <span class="material-symbols-outlined text-4xl">local_fire_department</span>
 </div>
 <h4 class="text-3xl font-headline font-bold text-primary mb-6">AVCB &amp; Projeto de Incêndio</h4>
@@ -406,8 +557,8 @@
 </a>
 </div>
 <!-- Vigilância Sanitária Card -->
-<div class="bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant/10 shadow-sm hover:shadow-xl transition-all duration-500 group">
-<div class="w-16 h-16 bg-secondary text-white flex items-center justify-center rounded-xl mb-8 group-hover:scale-110 transition-transform">
+<div class="bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant/10 shadow-sm hover:shadow-xl transition-all duration-500 group hover-lift fade-up delay-300">
+<div class="w-16 h-16 bg-secondary text-white flex items-center justify-center rounded-xl mb-8 group-hover:scale-110 transition-transform hover-rotate">
 <span class="material-symbols-outlined text-4xl">health_and_safety</span>
 </div>
 <h4 class="text-3xl font-headline font-bold text-primary mb-6">Vigilância Sanitária (SEMUS)</h4>
@@ -742,7 +893,7 @@
 </footer>
 
 <!-- WhatsApp FAB -->
-<a class="fixed bottom-6 right-6 bg-secondary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-40" href="https://wa.me/55989883098259?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20BR%20Consultoria%20Ambiental." aria-label="Contato via WhatsApp">
+<a class="fixed bottom-6 right-6 bg-secondary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-40 float-animation pulse-glow" href="https://wa.me/55989883098259?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20BR%20Consultoria%20Ambiental." aria-label="Contato via WhatsApp">
     <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
 </a>
 
@@ -823,6 +974,73 @@ Aguardo retorno!`;
         const whatsappUrl = `https://wa.me/55989883098259?text=${encodeURIComponent(mensagem)}`;
         window.open(whatsappUrl, '_blank');
         form.reset();
+    }
+});
+
+// Scroll Animations with Intersection Observer
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe all animated elements
+document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(el => {
+    observer.observe(el);
+});
+
+// Animate counters when visible
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            const final = el.dataset.value;
+            const suffix = el.dataset.suffix || '';
+            let current = 0;
+            const increment = parseInt(final) / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= parseInt(final)) {
+                    current = parseInt(final);
+                    clearInterval(timer);
+                }
+                el.textContent = Math.floor(current) + suffix;
+            }, 30);
+            counterObserver.unobserve(el);
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('[data-value]').forEach(el => {
+    counterObserver.observe(el);
+});
+
+// Parallax effect on scroll
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero-parallax');
+    if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+    }
+});
+
+// Navbar background on scroll
+const navbar = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('shadow-lg', 'bg-surface/95');
+        navbar.classList.remove('bg-surface/90');
+    } else {
+        navbar.classList.remove('shadow-lg', 'bg-surface/95');
+        navbar.classList.add('bg-surface/90');
     }
 });
 
