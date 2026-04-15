@@ -1,0 +1,8 @@
+# https://avcbsaoluisma.com.br/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://avcbsaoluisma.com.br/sitemap.xml
+
+# Crawl-delay para não sobrecarregar o servidor
+Crawl-delay: 10
